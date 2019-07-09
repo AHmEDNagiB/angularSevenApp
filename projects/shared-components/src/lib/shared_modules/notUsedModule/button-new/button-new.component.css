@@ -1,0 +1,20 @@
+/*
+1. Component as <BUTTON-new>
+
+We assumed that this component will have <BUTTON-new> as its tag.
+The CSS below is written with this in mind
+
+CSS for <BUTTON-new> begin
+*/
+button-new { display: block; cursor: pointer; width: 2.42857rem; height: 2.57143rem; padding: 0.71429rem 0.64286rem 0.78571rem 0.64286rem; }
+button-new .icon.icon-new { display: block; width: 1.07143rem; height: 1.07143rem; }
+
+/* CSS for <BUTTON-new> end */
+/*
+2. Component with a wrapper DIV around the HTML like <div class="button-new">.
+
+If you need to use <div class="button-new"> to wrap everything in the HTML
+of the component, let us know. We'll add/update the CSS to accommodate the requirements.
+
+3. If either option 1 or 2 doesn't work, let us know or the visuals of the component will be broken
+*/

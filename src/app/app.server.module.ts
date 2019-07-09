@@ -4,6 +4,9 @@ import { ServerModule, ServerTransferStateModule } from '@angular/platform-serve
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
+import { SharedComponentsModule } from 'shared-components';
+import { ButtonsModule } from 'shared-components';
+
 
 @NgModule({
   imports: [
@@ -11,6 +14,8 @@ import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader'
     ServerModule,
     ModuleMapLoaderModule,
     ServerTransferStateModule,
+    SharedComponentsModule,
+    ButtonsModule
   ],
   bootstrap: [AppComponent],
 })

@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { SharedComponentsModule } from 'shared-components';
+import { ButtonsModule } from 'shared-components';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NgtUniversalModule } from '@ng-toolkit/universal';
     CommonModule,
     TransferHttpCacheModule,
     HttpClientModule,
-    NgtUniversalModule
+    NgtUniversalModule,
+    SharedComponentsModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

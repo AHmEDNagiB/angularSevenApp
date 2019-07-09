@@ -2,7 +2,15 @@
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app-server",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "shared-components": [
+        "../dist/shared-components"
+      ],
+      "shared-components/*": [
+        "../dist/shared-components/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "entryModule": "app/app.server.module#AppServerModule"

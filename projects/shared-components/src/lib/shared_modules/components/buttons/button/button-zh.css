@@ -1,0 +1,16 @@
+button-component { display: inline-block; }
+button-component .btn { display: inline-block; font-size: 1rem; text-decoration: none; font-weight: 400; padding: 0.64286rem 1rem; text-transform: uppercase; background-color: transparent; border: 1px solid transparent; border-radius: 0px; cursor: pointer; }
+button-component .btn.active, button-component .btn:active, button-component .btn:active:focus { outline: none; box-shadow: none; }
+button-component .btn:focus { outline: none; }
+button-component .btn-bg, button-component .btn-bg:focus { color: #0078a5; }
+button-component .btn-bg:hover, button-component .btn-bg:focus:hover { color: #0078a5; background-color: rgba(0, 120, 165, 0.1); }
+button-component .btn-bg.selected { color: #fff; background-color: rgba(0, 120, 165, 0.8); border: solid 1px #3990b4; }
+button-component .btn-bg.selected:hover, button-component .btn-bg.selected:focus { color: #fff; background-color: rgba(0, 120, 165, 0.8); }
+button-component .btn-bg.bg_greyish { color: #afafaf; background-color: transparent; border: 1px solid transparent; cursor: not-allowed; }
+button-component .btn-bg.bg_greyish:hover, button-component .btn-bg.bg_greyish:focus { color: #afafaf; background-color: transparent; border: 1px solid transparent; }
+button-component .btn-warning { color: #fd5c5a; }
+button-component .btn-warning:hover { background-color: rgba(253, 92, 90, 0.1); }
+button-component .btn-warning.bg_greyish { color: #afafaf; background-color: transparent; border: 1px solid transparent; cursor: not-allowed; }
+button-component .btn-warning.bg_greyish:hover, button-component .btn-warning.bg_greyish:focus { color: #afafaf; background-color: transparent; border: 1px solid transparent; }
+
+.btn-bg.disable { cursor: not-allowed; }
