@@ -25,6 +25,8 @@
       "shared-components/*": [
         "dist/shared-components/*"
       ]
-    }
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   }
 }

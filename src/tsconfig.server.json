@@ -14,5 +14,7 @@
   },
   "angularCompilerOptions": {
     "entryModule": "app/app.server.module#AppServerModule"
-  }
+  },
+  "resolveJsonModule": true,
+  "esModuleInterop": true
 }

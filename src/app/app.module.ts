@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { SharedComponentsModule } from 'shared-components';
 import { ButtonsModule } from 'shared-components';
+import { AppConfigService } from './app-config.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,24 @@ import { ButtonsModule } from 'shared-components';
     SharedComponentsModule,
     ButtonsModule
   ],
-  providers: [],
+  providers: [{
+    provide: APP_INITIALIZER,
+    multi: true,
+    deps: [AppConfigService],
+    useFactory: (appConfigService: AppConfigService) => {
+      return () => {
+        // Make sure to return a promise!
+        console.log('here loadAppConfig() ');
+        try {
+          return appConfigService.loadAppConfig();
+        } catch (e) {
+          console.log('here ======================== 2');
+          console.log(e, e.stack);
+          console.error(e, e.stack);
+        }
+      };
+    }
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
